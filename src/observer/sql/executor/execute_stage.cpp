@@ -72,6 +72,7 @@ RC ExecuteStage::handle_request_with_physical_operator(SQLStageEvent *sql_event)
 
       // TODO: 改用Expression的name
       std::vector<Expression*> &query_exprs = select_stmt->query_exprs();
+         //枚举所有的查询表达式
       for (Expression* expr: query_exprs) {
         switch (expr->type())
         {
